@@ -8,5 +8,4 @@ import com.yugabyte.demo.iamservicewebflux.domain.UserProfile;
 @Repository
 public interface UserProfileRepository extends ReactiveCrudRepository<UserProfile, Integer> {
 
-
 }

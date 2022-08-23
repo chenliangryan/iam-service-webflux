@@ -14,9 +14,9 @@ public interface UserCredentialsRepository extends ReactiveCrudRepository<UserCr
     @Query("UPDATE user_credentials SET password_hash = :newPasswordHash WHERE user_id = :userId AND password_hash = :oldPasswordHash")
     Mono<Boolean> updatePasswordHash(String userId, String oldPasswordHash, String newPasswordHash);
 
-    @Query("SELECT profile_id FROM user_credentials WHERE user_id = :userId AND password_hash = :passwordHash")
-    Mono<Integer> authenticate(String userId, String passwordHash);
+    @Query("SELECT user_id FROM user_credentials WHERE user_id = :userId AND password_hash = :passwordHash")
+    Mono<String> authenticate(String userId, String passwordHash);
 
-    @Query("SELECT profile_id FROM user_credentials WHERE user_id = :userId")
-    Mono<Integer> findByUserId(String userId);
+    @Query("SELECT profile_id FROM user_credentials WHERE user_id = :user_id")
+    Mono<Integer> getUserProfileIdByUserId(String userId);
 }

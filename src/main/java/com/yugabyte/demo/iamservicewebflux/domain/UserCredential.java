@@ -27,13 +27,13 @@ public class UserCredential {
     }
 
     @Column(value = "profile_id")
-    private String userProfileId;
+    private Integer userProfileId;
 
-    public String getUserProfileId() {
+    public Integer getUserProfileId() {
         return userProfileId;
     }
 
-    public void setUserProfileId(String userProfileId) {
+    public void setUserProfileId(Integer userProfileId) {
         this.userProfileId = userProfileId;
     }
 }

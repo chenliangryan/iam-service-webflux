@@ -31,14 +31,14 @@ public class UserAudit {
     }
 
     @Column(value = "user_id")
-    String userProfileId;
+    String userId;
 
-    public String getUserProfileId() {
-        return userProfileId;
+    public String getUserId() {
+        return userId;
     }
 
-    public void setUserProfileId(String userProfileId) {
-        this.userProfileId = userProfileId;
+    public void setUserId(String userProfileId) {
+        this.userId = userProfileId;
     }
 
     @Column(value = "action")
